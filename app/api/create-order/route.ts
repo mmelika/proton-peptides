@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { v4 as uuidv4 } from 'uuid'
 import { createInvoice } from '@/lib/nowpayments'
 import { createOrder } from '@/lib/orderStore'
 import { CartItem, ShippingAddress } from '@/types'
@@ -18,20 +19,20 @@ export async function POST(req: NextRequest) {
     }
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-    // Temporary order ID for the invoice — we'll get the real one after createOrder
-    const tempId = `temp_${Date.now()}`
+    const orderId = uuidv4()
 
     const invoice = await createInvoice({
       price_amount: total,
       price_currency: 'usd',
-      order_id: tempId,
+      order_id: orderId,
       order_description: `Proton Peptides order — ${items.length} item(s)`,
-      success_url: `${baseUrl}/order/__ORDER_ID__`,   // replaced below
+      success_url: `${baseUrl}/order/${orderId}`,
       cancel_url: `${baseUrl}/checkout`,
       ipn_callback_url: `${baseUrl}/api/nowpayments-webhook`,
     })
 
     const order = createOrder({
+      id: orderId,
       invoiceId: invoice.id,
       paymentUrl: invoice.invoice_url,
       items,

@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid'
 const store = new Map<string, Order>()
 
 interface CreateOrderInput {
+  id?: string
   invoiceId: string
   paymentUrl: string
   items: CartItem[]
@@ -17,7 +18,7 @@ interface CreateOrderInput {
 export function createOrder(input: CreateOrderInput): Order {
   const now = new Date().toISOString()
   const order: Order = {
-    id: uuidv4(),
+    id: input.id ?? uuidv4(),
     invoiceId: input.invoiceId,
     paymentUrl: input.paymentUrl,
     status: 'pending',
