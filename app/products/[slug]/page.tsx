@@ -2,6 +2,8 @@
 import { notFound } from 'next/navigation'
 import { useState } from 'react'
 import { ShoppingCart, FlaskConical } from 'lucide-react'
+import ProductImage from '@/components/ProductImage'
+import CertificateOfAnalysis from '@/components/CertificateOfAnalysis'
 import { useParams } from 'next/navigation'
 import products from '@/data/products.json'
 import { Product, ProductVariant } from '@/types'
@@ -13,6 +15,7 @@ const allProducts = products as Product[]
 function ProductDetail({ product }: { product: Product }) {
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant>(product.variants[0])
   const [added, setAdded] = useState(false)
+  const [activePhoto, setActivePhoto] = useState<'product' | 'coa'>('product')
   const { addItem } = useCart()
 
   const price = selectedVariant.salePrice ?? selectedVariant.price
@@ -35,9 +38,30 @@ function ProductDetail({ product }: { product: Product }) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
       <div className="grid md:grid-cols-2 gap-10">
-        {/* Image placeholder */}
-        <div className="bg-brand-gray rounded-2xl h-72 flex items-center justify-center">
-          <span className="text-3xl font-bold text-brand-blue/30 text-center px-6">{product.name}</span>
+        {/* Gallery */}
+        <div>
+          {activePhoto === 'product'
+            ? <ProductImage product={product} className="rounded-2xl h-72 w-full" />
+            : <CertificateOfAnalysis product={product} className="rounded-2xl h-72 w-full border border-brand-border" />
+          }
+          {/* Thumbnails */}
+          <div className="flex gap-2 mt-3">
+            <button
+              onClick={() => setActivePhoto('product')}
+              className={`flex-1 h-14 rounded-lg overflow-hidden border-2 transition-colors ${activePhoto === 'product' ? 'border-brand-blue' : 'border-brand-border hover:border-gray-300'}`}
+            >
+              <ProductImage product={product} className="h-full w-full" />
+            </button>
+            <button
+              onClick={() => setActivePhoto('coa')}
+              className={`flex-1 h-14 rounded-lg overflow-hidden border-2 transition-colors ${activePhoto === 'coa' ? 'border-brand-blue' : 'border-brand-border hover:border-gray-300'}`}
+            >
+              <div className="h-full w-full bg-white flex items-center justify-center gap-1.5 border-b-2" style={{ borderColor: '#0057FF' }}>
+                <span className="text-[10px] font-bold text-brand-blue tracking-wide">CoA</span>
+                <span className="text-[8px] text-gray-400 font-medium">Certificate</span>
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Info */}

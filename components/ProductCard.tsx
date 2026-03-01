@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Product } from '@/types'
+import ProductImage from '@/components/ProductImage'
 
 interface Props {
   product: Product
@@ -28,12 +29,7 @@ export default function ProductCard({ product }: Props) {
       href={`/products/${product.slug}`}
       className="group block bg-white rounded-xl border border-brand-border shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
     >
-      {/* Image placeholder */}
-      <div className="h-44 bg-brand-gray rounded-t-xl flex items-center justify-center">
-        <span className="text-2xl font-bold text-brand-blue/30 text-center px-4">
-          {product.name}
-        </span>
-      </div>
+      <ProductImage product={product} className="h-44 rounded-t-xl" />
 
       <div className="p-4">
         {/* Category badge */}
