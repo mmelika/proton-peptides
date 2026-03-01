@@ -1,101 +1,93 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { ArrowRight, FlaskConical } from 'lucide-react'
+import products from '@/data/products.json'
+import { Product } from '@/types'
+import ProductCard from '@/components/ProductCard'
+import TrustBadges from '@/components/TrustBadges'
 
-export default function Home() {
+const allProducts = products as Product[]
+const featured = allProducts.filter(p => p.featured)
+
+const categories = [
+  { key: 'performance', label: 'Performance & Recovery', desc: 'BPC-157, TB-500, GLP peptides, and more' },
+  { key: 'isolates', label: 'GLP Peptides', desc: 'GLP1, GLP2, GLP3 — freeze-dried isolates' },
+  { key: 'skin', label: 'Skin Research', desc: 'GHK-Cu, Melanotan, GLOW Blend' },
+  { key: 'solutions', label: 'Solutions', desc: 'L-Carnitine, Bacteriostatic Water, ShredX' },
+]
+
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* Hero */}
+      <section className="bg-brand-dark text-white py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 text-sm px-4 py-1.5 rounded-full mb-6">
+            <FlaskConical size={14} />
+            <span>For Research Purposes Only</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+            Research-Grade<br />
+            <span className="text-brand-blue">Peptides</span> Delivered.
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
+            Third-party tested, lab-certified compounds for qualified researchers.
+            Crypto-only. Ships same day.
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link
+              href="/products"
+              className="bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
+            >
+              Browse Catalog <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/products?category=isolates"
+              className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+            >
+              GLP Peptides
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Trust badges */}
+      <section className="max-w-6xl mx-auto px-4 py-12">
+        <TrustBadges />
+      </section>
+
+      {/* Featured products */}
+      <section className="max-w-6xl mx-auto px-4 pb-12">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-brand-dark">Featured Products</h2>
+          <Link href="/products" className="text-brand-blue text-sm font-medium hover:underline inline-flex items-center gap-1">
+            View all <ArrowRight size={14} />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {featured.map(p => <ProductCard key={p.id} product={p} />)}
+        </div>
+      </section>
+
+      {/* Category nav */}
+      <section className="bg-brand-gray py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-brand-dark mb-6">Shop by Category</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {categories.map(cat => (
+              <Link
+                key={cat.key}
+                href={`/products?category=${cat.key}`}
+                className="bg-white rounded-xl p-5 border border-brand-border hover:border-brand-blue hover:shadow-md transition-all group"
+              >
+                <h3 className="font-semibold text-brand-dark group-hover:text-brand-blue transition-colors mb-1">
+                  {cat.label}
+                </h3>
+                <p className="text-xs text-gray-500">{cat.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
