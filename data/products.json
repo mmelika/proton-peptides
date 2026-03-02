@@ -573,7 +573,7 @@
     "shortDescription": "Amino acid derivative in sterile solution for mitochondrial and metabolic research.",
     "description": "L-Carnitine is an amino acid derivative essential for mitochondrial fatty acid oxidation, facilitating transport of long-chain fatty acyl groups across the inner mitochondrial membrane. Research applications include lipid metabolism, mitochondrial function, and insulin sensitivity studies.",
     "dosageInfo": "Available in 600mg/mL, 2000mg/mL, and 4000mg/mL sterile solutions. Refrigerate upon receipt.",
-    "featured": false,
+    "featured": true,
     "variants": [
       {
         "label": "600mg",
@@ -685,7 +685,7 @@
     "shortDescription": "Sterile water with 0.9% benzyl alcohol for peptide reconstitution.",
     "description": "Bacteriostatic Water (BW) is sterile water preserved with 0.9% benzyl alcohol for multi-dose reconstitution of lyophilized research compounds. The benzyl alcohol inhibits bacterial growth, allowing extended use of reconstituted preparations. Standard lab supply.",
     "dosageInfo": "30mL multi-dose vial. Store at room temperature. Use within 28 days of opening.",
-    "featured": false,
+    "featured": true,
     "variants": [
       {
         "label": "30ml",
@@ -829,25 +829,25 @@
     ]
   },
   {
-    "id": "glp3",
-    "slug": "glp3-glp-gip-gluc",
-    "name": "GLP-3 RT",
+    "id": "retatrutide",
+    "slug": "retatrutide",
+    "name": "Retatrutide",
     "category": "isolates",
     "categoryLabel": "Freeze Dried Isolates",
     "shortDescription": "Triple receptor agonist targeting GLP-1, GIP, and glucagon pathways simultaneously.",
-    "description": "GLP3 is a triagonist targeting GLP-1, GIP, and glucagon receptors. Published preclinical research has examined synergistic effects on metabolic rate, energy expenditure, glucose regulation, and lipid homeostasis. One of the most advanced compounds in metabolic research.",
+    "description": "Retatrutide is a triagonist targeting GLP-1, GIP, and glucagon receptors. Published preclinical research has examined synergistic effects on metabolic rate, energy expenditure, glucose regulation, and lipid homeostasis. One of the most advanced compounds in metabolic research.",
     "dosageInfo": "Available in 10mg and 20mg lyophilized preparations. Store at -20°C.",
     "featured": true,
     "variants": [
       {
         "label": "10mg",
         "price": 65,
-        "sku": "GLP3-10"
+        "sku": "RETA-10"
       },
       {
         "label": "20mg",
         "price": 100,
-        "sku": "GLP3-20"
+        "sku": "RETA-20"
       }
     ],
     "reviews": [
@@ -856,14 +856,14 @@
         "author": "Dr. M. Williams",
         "rating": 5,
         "date": "2025-11-20",
-        "content": "Exceptional purity on the GLP3. Mass spec confirms >99%. Proton is the best source I've found."
+        "content": "Exceptional purity on the Retatrutide. Mass spec confirms >99%. Proton is the best source I've found."
       },
       {
         "id": "r2",
         "author": "Lucas F.",
         "rating": 5,
         "date": "2025-11-08",
-        "content": "Third order of GLP3/GIP/GLUC. Consistent quality, ships with dry ice."
+        "content": "Third order of Retatrutide. Consistent quality, ships with dry ice."
       },
       {
         "id": "r3",
@@ -891,7 +891,7 @@
         "author": "Victor P.",
         "rating": 5,
         "date": "2025-09-15",
-        "content": "My entire lab orders from Proton now. The GLP3 in particular is hard to source this pure elsewhere."
+        "content": "My entire lab orders from Proton now. Retatrutide in particular is hard to source this pure elsewhere."
       }
     ]
   },
@@ -1010,20 +1010,20 @@
     ]
   },
   {
-    "id": "glp3-starter-bundle",
-    "slug": "glp3-starter-bundle",
-    "name": "GLP3 Starter Bundle",
+    "id": "retatrutide-starter-bundle",
+    "slug": "retatrutide-starter-bundle",
+    "name": "Retatrutide Starter Bundle",
     "category": "isolates",
     "categoryLabel": "Freeze Dried Isolates",
-    "shortDescription": "GLP3 triple agonist (10mg) bundled with bacteriostatic water for complete research setup.",
-    "description": "The GLP3 Starter Bundle includes 10mg GLP/GIP/Glucagon triple receptor agonist with bacteriostatic water, providing a complete starting package for triple incretin pathway research — the most comprehensive incretin research bundle available.",
-    "dosageInfo": "Bundle includes 10mg GLP3 lyophilized isolate and 10mL bacteriostatic water. Store per individual component instructions.",
+    "shortDescription": "Retatrutide (10mg) bundled with bacteriostatic water for complete research setup.",
+    "description": "The Retatrutide Starter Bundle includes 10mg Retatrutide triple receptor agonist with bacteriostatic water, providing a complete starting package for triple incretin pathway research — the most comprehensive incretin research bundle available.",
+    "dosageInfo": "Bundle includes 10mg Retatrutide lyophilized isolate and 10mL bacteriostatic water. Store per individual component instructions.",
     "featured": false,
     "variants": [
       {
         "label": "Bundle",
-        "price": 100,
-        "sku": "GLP3-BUNDLE"
+        "price": 75,
+        "sku": "RETA-BUNDLE"
       }
     ],
     "reviews": [

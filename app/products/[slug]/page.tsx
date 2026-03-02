@@ -41,16 +41,18 @@ function ProductDetail({ product }: { product: Product }) {
         {/* Gallery */}
         <div>
           {activePhoto === 'product'
-            ? <ProductImage product={product} className="rounded-2xl h-96 w-full" contain />
+            ? <div style={{ clipPath: 'inset(0 0 4% 0 round 1rem)' }}><ProductImage product={product} className="rounded-2xl h-96 w-full" contain /></div>
             : <CertificateOfAnalysis product={product} className="rounded-2xl h-72 w-full border border-brand-border" />
           }
           {/* Thumbnails */}
           <div className="flex gap-2 mt-3">
             <button
               onClick={() => setActivePhoto('product')}
-              className={`flex-1 h-14 rounded-lg overflow-hidden border-2 transition-colors ${activePhoto === 'product' ? 'border-brand-blue' : 'border-brand-border hover:border-gray-300'}`}
+              className={`flex-1 h-24 rounded-lg overflow-hidden border-2 transition-colors ${activePhoto === 'product' ? 'border-brand-blue' : 'border-brand-border hover:border-gray-300'}`}
             >
-              <ProductImage product={product} className="h-full w-full" />
+              <div style={{ clipPath: 'inset(0 0 4% 0)' }}>
+                <ProductImage product={product} className="h-24 w-full" contain />
+              </div>
             </button>
             <button
               onClick={() => setActivePhoto('coa')}

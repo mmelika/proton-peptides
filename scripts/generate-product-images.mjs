@@ -40,11 +40,11 @@ const PRODUCTS = [
   { slug: 'bacteriostatic-water',      name: 'B.Water',       mg: '30ML'      },
   { slug: 'glp1',                       name: 'GLP-1',         mg: '10MG'      },
   { slug: 'glp2-glp-gip',             name: 'GLP-2',         mg: '10MG'      },
-  // glp3-glp-gip-gluc → already done
+  // retatrutide → already done
   { slug: 'capsulated-glp-orforglipron', name: 'ORFG',        mg: 'Oral Caps' },
   { slug: 'nad-plus',                  name: 'NAD+',          mg: '100MG'     },
   { slug: 'glp2-starter-bundle',       name: 'GLP-2 Bundle',  mg: '10MG'      },
-  { slug: 'glp3-starter-bundle',       name: 'GLP-3 Bundle',  mg: '10MG'      },
+  { slug: 'retatrutide-starter-bundle', name: 'Retatrutide Bundle', mg: '10MG' },
 ]
 
 // How long to wait between requests (ms) to avoid rate-limit

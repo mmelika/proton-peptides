@@ -6,11 +6,22 @@ import ProductCard from '@/components/ProductCard'
 import TrustBadges from '@/components/TrustBadges'
 
 const allProducts = products as Product[]
-const featured = allProducts.filter(p => p.featured)
+const FEATURED_ORDER = [
+  'retatrutide',
+  'ghk-cu',
+  'bpc-157',
+  'l-carnitine',
+  'bacteriostatic-water',
+  'cjc-1295-ipamorelin',
+  'glp1',
+  'glp2-glp-gip',
+]
+const slugMap = new Map(allProducts.map(p => [p.slug, p]))
+const featured = FEATURED_ORDER.map(s => slugMap.get(s)).filter(Boolean) as Product[]
 
 const categories = [
   { key: 'performance', label: 'Performance & Recovery', desc: 'BPC-157, TB-500, GLP peptides, and more' },
-  { key: 'isolates', label: 'GLP Peptides', desc: 'GLP1, GLP2, GLP3 — freeze-dried isolates' },
+  { key: 'isolates', label: 'GLP Peptides', desc: 'GLP1, GLP2, Retatrutide — freeze-dried isolates' },
   { key: 'skin', label: 'Skin Research', desc: 'GHK-Cu, Melanotan, GLOW Blend' },
   { key: 'solutions', label: 'Solutions', desc: 'L-Carnitine, Bacteriostatic Water, ShredX' },
 ]

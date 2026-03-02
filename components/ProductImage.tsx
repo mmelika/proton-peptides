@@ -42,20 +42,21 @@ const ABBREV: Record<string, string> = {
   'bacteriostatic-water':       'B.WATER',
   'glp1':                       'GLP-1',
   'glp2-glp-gip':               'GLP-2',
-  'glp3-glp-gip-gluc':          'GLP-3 RT',
+  'retatrutide':                 'RETA',
   'capsulated-glp-orforglipron':'ORFG',
   'nad-plus':                   'NAD+',
   'glp2-starter-bundle':        'BUNDLE',
-  'glp3-starter-bundle':        'BUNDLE',
+  'retatrutide-starter-bundle': 'BUNDLE',
 }
 
 interface Props {
   product: Product
   className?: string
   contain?: boolean  // true = object-contain (full image), false = object-cover (fill frame)
+  objectPosition?: string  // CSS object-position override, e.g. '50% 10%'
 }
 
-export default function ProductImage({ product, className = '', contain = false }: Props) {
+export default function ProductImage({ product, className = '', contain = false, objectPosition }: Props) {
   // Try each extension in order; fall back to SVG when all fail
   const [extIndex, setExtIndex] = useState(0)
 
@@ -68,6 +69,7 @@ export default function ProductImage({ product, className = '', contain = false 
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className={contain ? 'object-contain object-bottom' : 'object-cover'}
+          style={objectPosition ? { objectPosition } : undefined}
           onError={() => setExtIndex(i => i + 1)}
           unoptimized
         />

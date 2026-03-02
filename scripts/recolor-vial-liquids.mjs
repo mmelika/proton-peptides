@@ -8,11 +8,37 @@
  */
 import { readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
+import https from 'https'
+
+function httpsPost(url, body) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url)
+    const bodyBuf = Buffer.from(body)
+    const req = https.request({
+      hostname: u.hostname, path: u.pathname + u.search,
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Content-Length': bodyBuf.length },
+      timeout: 300_000,
+    }, (res) => {
+      const chunks = []
+      res.on('data', c => chunks.push(c))
+      res.on('end', () => {
+        const text = Buffer.concat(chunks).toString()
+        resolve({ ok: res.statusCode < 400, status: res.statusCode,
+                  json: () => JSON.parse(text), text: () => text })
+      })
+    })
+    req.on('error', reject)
+    req.on('timeout', () => { req.destroy(); reject(new Error('Request timeout')) })
+    req.write(bodyBuf)
+    req.end()
+  })
+}
 
 const API_KEY = process.env.GEMINI_API_KEY
 if (!API_KEY) { console.error('GEMINI_API_KEY not set'); process.exit(1) }
 
-const MODEL   = 'gemini-3-pro-image-preview'
+const MODEL   = 'gemini-3.1-flash-image-preview'
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`
 const DIR     = new URL('../public/products', import.meta.url).pathname
 
@@ -52,9 +78,9 @@ const LIQUID_COLORS = {
   'semax':                'crystal clear colorless liquid, water-white',
   'glp1':                 'crystal clear colorless liquid, water-white',
   'glp2-glp-gip':         'crystal clear colorless liquid, water-white',
-  'glp3-glp-gip-gluc':    'crystal clear colorless liquid, water-white',
-  'glp2-starter-bundle':  'crystal clear colorless liquid, water-white',
-  'glp3-starter-bundle':  'crystal clear colorless liquid, water-white',
+  'retatrutide':                  'crystal clear colorless liquid, water-white',
+  'glp2-starter-bundle':          'crystal clear colorless liquid, water-white',
+  'retatrutide-starter-bundle':   'crystal clear colorless liquid, water-white',
   'bacteriostatic-water': 'crystal clear colorless liquid, water-white',
 }
 
@@ -83,29 +109,22 @@ for (const slug of targets) {
   }
 
   const prompt =
-    `This is a photo of a peptide research vial. ` +
-    `Keep EVERYTHING exactly the same — the vial shape, label text, branding, background, lighting — ` +
-    `but make the liquid INSIDE the glass vial appear as: ${color}. ` +
-    `The vial should be exactly 50% full — the liquid fills the bottom half of the vial only, ` +
-    `with the upper half empty/air space above. The liquid surface should be clearly visible. ` +
-    `Do not change any text or labels.`
+    `Change only the color of the liquid inside this peptide research vial to: ${color}. ` +
+    `Keep everything else exactly the same — background, vial shape, lighting, water droplets, label. ` +
+    `The white label on the vial must stay completely white and unaffected. ` +
+    `Do not let any liquid color bleed onto, tint, or show through the white label in any way. ` +
+    `Only the liquid visible through the clear glass should change color.`
 
   console.log(`→ ${slug}: ${color}`)
 
   try {
-    const res = await fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{
-          parts: [
-            { text: prompt },
-            { inlineData: { mimeType: 'image/png', data: imageData } },
-          ]
-        }],
-        generationConfig: { responseModalities: ['IMAGE', 'TEXT'] },
-      }),
-    })
+    const res = await httpsPost(API_URL, JSON.stringify({
+      contents: [{ parts: [
+        { text: prompt },
+        { inlineData: { mimeType: 'image/png', data: imageData } },
+      ]}],
+      generationConfig: { responseModalities: ['IMAGE', 'TEXT'] },
+    }))
 
     if (!res.ok) {
       const err = await res.text()

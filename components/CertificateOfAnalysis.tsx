@@ -217,7 +217,7 @@ const SPECS: Record<string, CoaSpec> = {
     appearance: 'White lyophilized powder',
     method: 'RP-HPLC / ESI-MS',
   },
-  'glp3-glp-gip-gluc': {
+  'retatrutide': {
     chemicalName: 'Retatrutide',
     cas: 'Research Use / N/A',
     formula: 'Triple receptor agonist (GLP-1/GIP/GLUC)',
@@ -253,12 +253,12 @@ const SPECS: Record<string, CoaSpec> = {
     appearance: 'White powder + clear solution',
     method: 'RP-HPLC / ESI-MS',
   },
-  'glp3-starter-bundle': {
+  'retatrutide-starter-bundle': {
     chemicalName: 'Retatrutide + Bacteriostatic Water Bundle',
     cas: 'Bundle / N/A',
-    formula: 'GLP3 + Bacteriostatic Water',
+    formula: 'Retatrutide + Bacteriostatic Water',
     mw: 'See individual CoAs',
-    msResult: 'GLP3 component confirmed',
+    msResult: 'Retatrutide component confirmed',
     appearance: 'White powder + clear solution',
     method: 'RP-HPLC / ESI-MS',
   },
