@@ -60,7 +60,7 @@ export default function ProductImage({ product, className = '' }: Props) {
 
   if (extIndex < EXTENSIONS.length) {
     return (
-      <div className={`relative overflow-hidden ${className}`} style={{ background: '#07091a' }}>
+      <div className={`relative overflow-hidden ${className}`}>
         <Image
           src={`/products/${product.slug}.${EXTENSIONS[extIndex]}`}
           alt={product.name}
