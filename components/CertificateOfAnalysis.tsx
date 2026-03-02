@@ -27,6 +27,7 @@ function batchDate(id: string): string {
 
 // ─── Per-product analytical data ─────────────────────────────────────────────
 interface CoaSpec {
+  chemicalName: string
   cas: string
   formula: string
   mw: string
@@ -37,6 +38,7 @@ interface CoaSpec {
 
 const SPECS: Record<string, CoaSpec> = {
   'bpc-157': {
+    chemicalName: 'Pentadecapeptide BPC-157',
     cas: '137525-51-0',
     formula: 'C₆₂H₉₈N₁₆O₂₂',
     mw: '1419.55',
@@ -45,6 +47,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'bpc-157-tb-500-blend': {
+    chemicalName: 'Pentadecapeptide BPC-157 / Thymosin Beta-4 Blend',
     cas: 'Blend / N/A',
     formula: 'C₆₂H₉₈N₁₆O₂₂ + C₂₁₂H₃₅₀N₅₆O₇₈S',
     mw: '1419.6 / 4963.4',
@@ -53,6 +56,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'tb-500': {
+    chemicalName: 'Thymosin Beta-4 (Tβ4)',
     cas: '77591-33-4',
     formula: 'C₂₁₂H₃₅₀N₅₆O₇₈S',
     mw: '4963.44',
@@ -61,6 +65,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'cjc-1295-ipamorelin': {
+    chemicalName: 'Modified GRF (1-29) / Ipamorelin',
     cas: 'Blend / N/A',
     formula: 'C₁₅₂H₂₅₂N₄₄O₄₂ + C₃₈H₄₉N₉O₅',
     mw: '3647.2 / 711.9',
@@ -69,6 +74,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'mots-c': {
+    chemicalName: 'Mitochondrial ORF of the 12S rRNA Type-C (MOTS-c)',
     cas: '1627580-64-6',
     formula: 'C₁₀₀H₁₆₅N₃₃O₃₀',
     mw: '2174.56',
@@ -77,6 +83,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'hcg': {
+    chemicalName: 'Human Chorionic Gonadotropin (hCG)',
     cas: '9002-61-3',
     formula: 'Glycoprotein (α + β subunit)',
     mw: '≥ 4500 IU/mg (Bioassay)',
@@ -85,6 +92,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'HPLC / Immunoassay',
   },
   'tesamorelin': {
+    chemicalName: 'Tesamorelin (Trans-3-Hexenoic Acid-GRF)',
     cas: '218949-48-5',
     formula: 'C₂₂₁H₃₆₆N₆₆O₆₇S',
     mw: '5135.83',
@@ -93,6 +101,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'fox04-dri': {
+    chemicalName: 'FOXO4-DRI (D-Retro-Inverso Peptide)',
     cas: 'Research Use / N/A',
     formula: 'D-amino acid retro-inverso peptide',
     mw: '1454.8 (calc.)',
@@ -101,6 +110,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / MALDI-TOF',
   },
   'mgf': {
+    chemicalName: 'Mechano Growth Factor (PEG-MGF)',
     cas: 'Research Use / N/A',
     formula: 'C₁₄₁H₂₃₀N₄₂O₃₉',
     mw: '2867.22',
@@ -109,6 +119,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'ghk-cu': {
+    chemicalName: 'Copper(II) Glycyl-L-Histidyl-L-Lysine (GHK-Cu)',
     cas: '89030-95-5',
     formula: 'C₁₄H₂₃CuN₆O₄',
     mw: '402.90',
@@ -117,6 +128,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ICP-MS',
   },
   'melanotan-1': {
+    chemicalName: 'Afamelanotide',
     cas: '75921-69-6',
     formula: 'C₇₈H₁₁₁N₂₁O₁₉',
     mw: '1646.87',
@@ -125,6 +137,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'melanotan-2': {
+    chemicalName: 'Melanotan II (MT-II)',
     cas: '121062-08-6',
     formula: 'C₅₀H₆₉N₁₅O₉',
     mw: '1024.19',
@@ -133,6 +146,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'semax': {
+    chemicalName: 'Semax (Met-Glu-His-Phe-Pro-Gly-Pro)',
     cas: '80714-61-4',
     formula: 'C₃₇H₅₁N₉O₁₀S',
     mw: '813.93',
@@ -141,6 +155,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'glow-blend': {
+    chemicalName: 'GHK-Cu / Afamelanotide Cosmetic Blend',
     cas: 'Proprietary Blend',
     formula: 'GHK-Cu + MT-I + peptide matrix',
     mw: 'Mixed (see components)',
@@ -149,6 +164,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ICP-MS / ESI-MS',
   },
   'l-carnitine': {
+    chemicalName: 'L-Carnitine (β-Hydroxy-γ-trimethylaminobutyric acid)',
     cas: '541-15-1',
     formula: 'C₇H₁₅NO₃',
     mw: '161.20',
@@ -157,6 +173,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'HPLC-UV / ESI-MS',
   },
   'shredx-blend': {
+    chemicalName: 'L-Carnitine / 5-Amino-1MQ Injectable Blend',
     cas: 'Proprietary Blend',
     formula: 'L-Carnitine + 5-Amino-1MQ matrix',
     mw: 'Mixed (see components)',
@@ -165,6 +182,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'HPLC-UV / ESI-MS',
   },
   'nad-5amino1mq': {
+    chemicalName: 'β-Nicotinamide Adenine Dinucleotide / 5-Amino-1-Methylquinolinium',
     cas: '53-84-9 / Proprietary',
     formula: 'C₂₁H₂₇N₇O₁₄P₂ + C₁₁H₁₂N₂',
     mw: '663.4 / 172.2',
@@ -173,6 +191,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'HPLC-UV / ESI-MS',
   },
   'bacteriostatic-water': {
+    chemicalName: 'Bacteriostatic Water for Injection USP (0.9% Benzyl Alcohol)',
     cas: '7732-18-5 (water)',
     formula: 'H₂O + 0.9% benzyl alcohol',
     mw: '18.02 (water)',
@@ -181,6 +200,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'GC-MS / Karl Fischer',
   },
   'glp1': {
+    chemicalName: 'Semaglutide',
     cas: 'Research Use / N/A',
     formula: 'GLP-1 receptor agonist analog',
     mw: '4113.6 (calc.)',
@@ -189,6 +209,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'glp2-glp-gip': {
+    chemicalName: 'Tirzepatide',
     cas: 'Research Use / N/A',
     formula: 'Dual GLP-1/GIP receptor agonist',
     mw: '4813.7 (calc.)',
@@ -197,6 +218,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'glp3-glp-gip-gluc': {
+    chemicalName: 'Retatrutide',
     cas: 'Research Use / N/A',
     formula: 'Triple receptor agonist (GLP-1/GIP/GLUC)',
     mw: '4959.4 (calc.)',
@@ -205,6 +227,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS / CD',
   },
   'capsulated-glp-orforglipron': {
+    chemicalName: 'Orforglipron',
     cas: 'Research Use / N/A',
     formula: 'C₂₄H₂₂F₂N₄O₃',
     mw: '460.46',
@@ -213,6 +236,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'HPLC-UV / LC-MS/MS',
   },
   'nad-plus': {
+    chemicalName: 'β-Nicotinamide Adenine Dinucleotide (NAD⁺)',
     cas: '53-84-9',
     formula: 'C₂₁H₂₇N₇O₁₄P₂',
     mw: '663.43',
@@ -221,6 +245,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'HPLC-UV / ESI-MS',
   },
   'glp2-starter-bundle': {
+    chemicalName: 'Tirzepatide + Bacteriostatic Water Bundle',
     cas: 'Bundle / N/A',
     formula: 'GLP2 + Bacteriostatic Water',
     mw: 'See individual CoAs',
@@ -229,6 +254,7 @@ const SPECS: Record<string, CoaSpec> = {
     method: 'RP-HPLC / ESI-MS',
   },
   'glp3-starter-bundle': {
+    chemicalName: 'Retatrutide + Bacteriostatic Water Bundle',
     cas: 'Bundle / N/A',
     formula: 'GLP3 + Bacteriostatic Water',
     mw: 'See individual CoAs',
@@ -239,6 +265,7 @@ const SPECS: Record<string, CoaSpec> = {
 }
 
 const FALLBACK_SPEC: CoaSpec = {
+  chemicalName: 'Synthetic Research Peptide',
   cas: 'Research Use / N/A',
   formula: 'Synthetic peptide',
   mw: 'See specification sheet',
@@ -300,7 +327,10 @@ export default function CertificateOfAnalysis({ product, className = '' }: Props
 
       {/* Product Info */}
       <div style={{ padding: '8px 14px', background: '#f0f4ff', borderBottom: '1px solid #e0e8ff' }}>
-        <div style={{ fontWeight: 700, fontSize: 12, marginBottom: 4, color: '#0057FF' }}>
+        <div style={{ fontWeight: 700, fontSize: 12, marginBottom: 1, color: '#0057FF' }}>
+          {spec.chemicalName}
+        </div>
+        <div style={{ fontSize: 9, color: '#6b7280', marginBottom: 4, fontStyle: 'italic' }}>
           {product.name}
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px 12px' }}>

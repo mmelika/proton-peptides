@@ -723,12 +723,12 @@
     "variants": [
       {
         "label": "10mg",
-        "price": 70,
+        "price": 55,
         "sku": "GLP1-10"
       },
       {
         "label": "30mg",
-        "price": 120,
+        "price": 100,
         "sku": "GLP1-30"
       }
     ],
@@ -776,17 +776,17 @@
     "variants": [
       {
         "label": "10mg",
-        "price": 70,
+        "price": 55,
         "sku": "GLP2-10"
       },
       {
         "label": "20mg",
-        "price": 105,
+        "price": 85,
         "sku": "GLP2-20"
       },
       {
         "label": "40mg",
-        "price": 135,
+        "price": 115,
         "sku": "GLP2-40"
       }
     ],
