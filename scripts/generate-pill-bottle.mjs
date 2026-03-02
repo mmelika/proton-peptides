@@ -10,9 +10,13 @@ const PRODUCTS = [
   {
     slug: 'capsulated-glp-orforglipron',
     label: 'Orforglipron\n30 Capsules',
-    prompt: `Professional product photo of a single amber prescription pill bottle with a white child-proof cap, on a clean dark navy (#1A1A2E) background.
-The bottle has a clean white label with the text "Orforglipron" in bold and "30 Capsules" underneath, styled in minimalist pharmaceutical design with a blue (#0057FF) accent bar at the top of the label.
-The bottle contains visible orange/amber capsules through a semi-transparent body.
+    prompt: `Professional product photo of a single sleek supplement pill bottle with a white screw cap, on a clean dark navy (#1A1A2E) background.
+The bottle is amber/translucent with visible orange capsules inside.
+The label is clean and modern with a dark navy background and blue (#0057FF) accent elements. The label reads:
+- "PROTON PEPTIDES" in small caps at the top
+- "Orforglipron" in large bold white text in the center
+- "30 Capsules" in smaller text below
+No prescription text, no dosage instructions, no Rx markings, no pharmacy info. Clean supplement brand label only.
 Dramatic studio lighting with a subtle blue-tinted rim light from the right. Soft shadow beneath the bottle.
 Product photography, high detail, 4K, centered composition.
 NO vials, NO syringes, NO needles. Pill bottle only.`,
