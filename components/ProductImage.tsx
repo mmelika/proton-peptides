@@ -52,9 +52,10 @@ const ABBREV: Record<string, string> = {
 interface Props {
   product: Product
   className?: string
+  contain?: boolean  // true = object-contain (full image), false = object-cover (fill frame)
 }
 
-export default function ProductImage({ product, className = '' }: Props) {
+export default function ProductImage({ product, className = '', contain = false }: Props) {
   // Try each extension in order; fall back to SVG when all fail
   const [extIndex, setExtIndex] = useState(0)
 
@@ -66,7 +67,7 @@ export default function ProductImage({ product, className = '' }: Props) {
           alt={product.name}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover"
+          className={contain ? 'object-contain object-bottom' : 'object-cover'}
           onError={() => setExtIndex(i => i + 1)}
           unoptimized
         />

@@ -41,7 +41,7 @@ function ProductDetail({ product }: { product: Product }) {
         {/* Gallery */}
         <div>
           {activePhoto === 'product'
-            ? <ProductImage product={product} className="rounded-2xl h-72 w-full" />
+            ? <ProductImage product={product} className="rounded-2xl h-96 w-full" contain />
             : <CertificateOfAnalysis product={product} className="rounded-2xl h-72 w-full border border-brand-border" />
           }
           {/* Thumbnails */}
