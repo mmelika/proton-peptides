@@ -12,17 +12,19 @@ function lotNumber(id: string): string {
   let h = 0
   for (const c of id) h = (Math.imul(31, h) + c.charCodeAt(0)) | 0
   const n = (h >>> 0) % 9000 + 1000
-  const m = String(((h >>> 8) % 12) + 1).padStart(2, '0')
-  return `PP-2025-${m}-${n}`
+  const monthNum = ((h >>> 8) % 3) // 0=Dec 2025, 1=Jan 2026, 2=Feb 2026
+  const paddedM = monthNum === 0 ? '12' : String(monthNum).padStart(2, '0')
+  const yearStr = monthNum === 0 ? '2025' : '2026'
+  return `PP-${yearStr}-${paddedM}-${n}`
 }
 
 function batchDate(id: string): string {
   let h = 0
   for (const c of id) h = (Math.imul(31, h) + c.charCodeAt(0)) | 0
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-  const m = months[(h >>> 0) % 6 + 5] // Jun–Nov 2025
+  const options: Array<[string, string]> = [['Dec', '2025'], ['Jan', '2026'], ['Feb', '2026']]
+  const [month, year] = options[(h >>> 0) % 3]
   const d = ((h >>> 4) % 28) + 1
-  return `${d < 10 ? '0' + d : d} ${m} 2025`
+  return `${d < 10 ? '0' + d : d} ${month} ${year}`
 }
 
 // ─── Per-product analytical data ─────────────────────────────────────────────
@@ -225,15 +227,6 @@ const SPECS: Record<string, CoaSpec> = {
     msResult: '[M+5H]⁵⁺ 992.9',
     appearance: 'White lyophilized powder',
     method: 'RP-HPLC / ESI-MS / CD',
-  },
-  'capsulated-glp-orforglipron': {
-    chemicalName: 'Orforglipron',
-    cas: 'Research Use / N/A',
-    formula: 'C₂₄H₂₂F₂N₄O₃',
-    mw: '460.46',
-    msResult: '[M+H]⁺ 461.5',
-    appearance: 'White to off-white capsules',
-    method: 'HPLC-UV / LC-MS/MS',
   },
   'nad-plus': {
     chemicalName: 'β-Nicotinamide Adenine Dinucleotide (NAD⁺)',
