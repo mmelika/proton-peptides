@@ -31,7 +31,7 @@ export default function ProductCard({ product }: Props) {
     >
       <ProductImage product={product} className="h-64 rounded-t-xl" />
 
-      <div className="p-4">
+      <div className="px-4 pt-2 pb-4">
         {/* Category badge */}
         <span className="inline-block text-xs font-medium text-brand-blue bg-blue-50 px-2 py-0.5 rounded-full mb-2">
           {product.categoryLabel}
