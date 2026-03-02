@@ -10,17 +10,69 @@
     "dosageInfo": "Supplied as 10mg lyophilized powder. Reconstitute with bacteriostatic water. Store at -20°C.",
     "featured": true,
     "variants": [
-      { "label": "10mg", "price": 55, "sku": "BPC157-10" }
+      {
+        "label": "10mg",
+        "price": 45,
+        "sku": "BPC157-10"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Michael T.", "rating": 5, "date": "2025-11-15", "content": "Third order from Proton. Lyophilized powder looks clean, ships fast with cold packs. Lab-verified purity. Will keep ordering." },
-      { "id": "r2", "author": "Sarah K.", "rating": 5, "date": "2025-10-28", "content": "Ordered for tissue repair research. Arrived in 3 days, well-packaged with CoA included. Reconstitutes cleanly." },
-      { "id": "r3", "author": "James R.", "rating": 4, "date": "2025-10-10", "content": "Good quality peptide. Packaging could be slightly better but the product itself is excellent. Will reorder." },
-      { "id": "r4", "author": "Dr. A. Patel", "rating": 5, "date": "2025-09-22", "content": "Using for wound healing research. Consistently pure product across three orders. Shipping is reliable." },
-      { "id": "r5", "author": "Cody W.", "rating": 5, "date": "2025-09-05", "content": "Best source for BPC-157. Fast shipping, CoA included, clean lyophilized powder. Have reordered 4 times." },
-      { "id": "r6", "author": "Lisa M.", "rating": 4, "date": "2025-08-18", "content": "Solid product for GI motility research. Lab testing showed 98.7% purity. Prompt delivery." },
-      { "id": "r7", "author": "Ryan O.", "rating": 5, "date": "2025-08-01", "content": "Top quality, fast shipping, crypto payment was seamless. No complaints." },
-      { "id": "r8", "author": "Tom H.", "rating": 5, "date": "2025-07-02", "content": "Proton Peptides is my go-to for BPC-157. Great pricing, fast delivery, consistent purity." }
+      {
+        "id": "r1",
+        "author": "Michael T.",
+        "rating": 5,
+        "date": "2025-11-15",
+        "content": "Third order from Proton. Lyophilized powder looks clean, ships fast with cold packs. Lab-verified purity. Will keep ordering."
+      },
+      {
+        "id": "r2",
+        "author": "Sarah K.",
+        "rating": 5,
+        "date": "2025-10-28",
+        "content": "Ordered for tissue repair research. Arrived in 3 days, well-packaged with CoA included. Reconstitutes cleanly."
+      },
+      {
+        "id": "r3",
+        "author": "James R.",
+        "rating": 4,
+        "date": "2025-10-10",
+        "content": "Good quality peptide. Packaging could be slightly better but the product itself is excellent. Will reorder."
+      },
+      {
+        "id": "r4",
+        "author": "Dr. A. Patel",
+        "rating": 5,
+        "date": "2025-09-22",
+        "content": "Using for wound healing research. Consistently pure product across three orders. Shipping is reliable."
+      },
+      {
+        "id": "r5",
+        "author": "Cody W.",
+        "rating": 5,
+        "date": "2025-09-05",
+        "content": "Best source for BPC-157. Fast shipping, CoA included, clean lyophilized powder. Have reordered 4 times."
+      },
+      {
+        "id": "r6",
+        "author": "Lisa M.",
+        "rating": 4,
+        "date": "2025-08-18",
+        "content": "Solid product for GI motility research. Lab testing showed 98.7% purity. Prompt delivery."
+      },
+      {
+        "id": "r7",
+        "author": "Ryan O.",
+        "rating": 5,
+        "date": "2025-08-01",
+        "content": "Top quality, fast shipping, crypto payment was seamless. No complaints."
+      },
+      {
+        "id": "r8",
+        "author": "Tom H.",
+        "rating": 5,
+        "date": "2025-07-02",
+        "content": "Proton Peptides is my go-to for BPC-157. Great pricing, fast delivery, consistent purity."
+      }
     ]
   },
   {
@@ -34,12 +86,34 @@
     "dosageInfo": "Supplied as 20mg total lyophilized blend (10mg BPC-157 + 10mg TB-500). Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "10mg/10mg", "price": 85, "sku": "BPCTB-BLEND" }
+      {
+        "label": "10mg/10mg",
+        "price": 70,
+        "sku": "BPCTB-BLEND"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Daniel F.", "rating": 5, "date": "2025-10-05", "content": "Ordered for a comparative healing study. Both compounds arrived well-preserved. Excellent value vs buying separately." },
-      { "id": "r2", "author": "Emma S.", "rating": 4, "date": "2025-09-12", "content": "Good blend, arrived quickly. Would appreciate slightly larger vial for the price but quality is there." },
-      { "id": "r3", "author": "Kevin L.", "rating": 5, "date": "2025-08-30", "content": "Clean powder, great packaging, fast shipping. Running a tissue repair study and this is perfect." }
+      {
+        "id": "r1",
+        "author": "Daniel F.",
+        "rating": 5,
+        "date": "2025-10-05",
+        "content": "Ordered for a comparative healing study. Both compounds arrived well-preserved. Excellent value vs buying separately."
+      },
+      {
+        "id": "r2",
+        "author": "Emma S.",
+        "rating": 4,
+        "date": "2025-09-12",
+        "content": "Good blend, arrived quickly. Would appreciate slightly larger vial for the price but quality is there."
+      },
+      {
+        "id": "r3",
+        "author": "Kevin L.",
+        "rating": 5,
+        "date": "2025-08-30",
+        "content": "Clean powder, great packaging, fast shipping. Running a tissue repair study and this is perfect."
+      }
     ]
   },
   {
@@ -53,12 +127,34 @@
     "dosageInfo": "Supplied as 10mg lyophilized powder. Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "10mg", "price": 55, "sku": "TB500-10" }
+      {
+        "label": "10mg",
+        "price": 45,
+        "sku": "TB500-10"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Marcus W.", "rating": 5, "date": "2025-11-01", "content": "Great purity, ships fast. Using for actin polymerization research. Will reorder." },
-      { "id": "r2", "author": "Priya N.", "rating": 4, "date": "2025-10-14", "content": "Second order, consistent quality. Packaging is professional and includes CoA." },
-      { "id": "r3", "author": "Jake B.", "rating": 5, "date": "2025-09-20", "content": "Clean lyophilized powder, reconstitutes easily. Reliable source." }
+      {
+        "id": "r1",
+        "author": "Marcus W.",
+        "rating": 5,
+        "date": "2025-11-01",
+        "content": "Great purity, ships fast. Using for actin polymerization research. Will reorder."
+      },
+      {
+        "id": "r2",
+        "author": "Priya N.",
+        "rating": 4,
+        "date": "2025-10-14",
+        "content": "Second order, consistent quality. Packaging is professional and includes CoA."
+      },
+      {
+        "id": "r3",
+        "author": "Jake B.",
+        "rating": 5,
+        "date": "2025-09-20",
+        "content": "Clean lyophilized powder, reconstitutes easily. Reliable source."
+      }
     ]
   },
   {
@@ -72,13 +168,41 @@
     "dosageInfo": "Supplied as 10mg total (5mg CJC-1295 + 5mg Ipamorelin) lyophilized powder. Store at -20°C.",
     "featured": true,
     "variants": [
-      { "label": "5mg/5mg", "price": 65, "sku": "CJCIPA-BLEND" }
+      {
+        "label": "5mg/5mg",
+        "price": 55,
+        "sku": "CJCIPA-BLEND"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Aaron M.", "rating": 5, "date": "2025-11-10", "content": "Using for GH secretion research. Excellent purity, arrived with independent CoA. Fast shipping." },
-      { "id": "r2", "author": "Jennifer H.", "rating": 5, "date": "2025-10-22", "content": "Fourth order from Proton for this blend. Consistent quality every time, great price." },
-      { "id": "r3", "author": "Chris P.", "rating": 4, "date": "2025-09-30", "content": "Good product, ships well packaged. I appreciate the research references on the product page." },
-      { "id": "r4", "author": "Natalie R.", "rating": 5, "date": "2025-09-08", "content": "Clean powder, excellent value for the combination. Will continue ordering for my lab." }
+      {
+        "id": "r1",
+        "author": "Aaron M.",
+        "rating": 5,
+        "date": "2025-11-10",
+        "content": "Using for GH secretion research. Excellent purity, arrived with independent CoA. Fast shipping."
+      },
+      {
+        "id": "r2",
+        "author": "Jennifer H.",
+        "rating": 5,
+        "date": "2025-10-22",
+        "content": "Fourth order from Proton for this blend. Consistent quality every time, great price."
+      },
+      {
+        "id": "r3",
+        "author": "Chris P.",
+        "rating": 4,
+        "date": "2025-09-30",
+        "content": "Good product, ships well packaged. I appreciate the research references on the product page."
+      },
+      {
+        "id": "r4",
+        "author": "Natalie R.",
+        "rating": 5,
+        "date": "2025-09-08",
+        "content": "Clean powder, excellent value for the combination. Will continue ordering for my lab."
+      }
     ]
   },
   {
@@ -92,12 +216,32 @@
     "dosageInfo": "Available in 10mg and 30mg lyophilized powder preparations. Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "10mg", "price": 45, "sku": "MOTSC-10" },
-      { "label": "30mg", "price": 130, "sku": "MOTSC-30" }
+      {
+        "label": "10mg",
+        "price": 40,
+        "sku": "MOTSC-10"
+      },
+      {
+        "label": "30mg",
+        "price": 110,
+        "sku": "MOTSC-30"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Grace L.", "rating": 5, "date": "2025-10-18", "content": "Ordered the 30mg for a metabolic study. Excellent purity, great packaging, fast delivery." },
-      { "id": "r2", "author": "Ben T.", "rating": 4, "date": "2025-09-25", "content": "Good quality. The 10mg is well-priced for the research quantity needed." }
+      {
+        "id": "r1",
+        "author": "Grace L.",
+        "rating": 5,
+        "date": "2025-10-18",
+        "content": "Ordered the 30mg for a metabolic study. Excellent purity, great packaging, fast delivery."
+      },
+      {
+        "id": "r2",
+        "author": "Ben T.",
+        "rating": 4,
+        "date": "2025-09-25",
+        "content": "Good quality. The 10mg is well-priced for the research quantity needed."
+      }
     ]
   },
   {
@@ -111,11 +255,27 @@
     "dosageInfo": "Supplied as 5000 IU lyophilized powder. Reconstitute with bacteriostatic water. Store at 2–8°C after reconstitution.",
     "featured": false,
     "variants": [
-      { "label": "5000 IU", "price": 65, "sku": "HCG-5000" }
+      {
+        "label": "5000 IU",
+        "price": 55,
+        "sku": "HCG-5000"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "David C.", "rating": 5, "date": "2025-10-30", "content": "Clean product, arrived cold-packed with CoA. Exactly what I needed for my research." },
-      { "id": "r2", "author": "Rachel S.", "rating": 4, "date": "2025-09-15", "content": "Good quality HCG. Reconstitutes well, ships fast. Reliable source." }
+      {
+        "id": "r1",
+        "author": "David C.",
+        "rating": 5,
+        "date": "2025-10-30",
+        "content": "Clean product, arrived cold-packed with CoA. Exactly what I needed for my research."
+      },
+      {
+        "id": "r2",
+        "author": "Rachel S.",
+        "rating": 4,
+        "date": "2025-09-15",
+        "content": "Good quality HCG. Reconstitutes well, ships fast. Reliable source."
+      }
     ]
   },
   {
@@ -129,11 +289,27 @@
     "dosageInfo": "Supplied as 10mg lyophilized powder. Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "10mg", "price": 80, "sku": "TESA-10" }
+      {
+        "label": "10mg",
+        "price": 70,
+        "sku": "TESA-10"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Mark A.", "rating": 5, "date": "2025-10-05", "content": "Excellent purity, clean white powder. Fast shipping and secure packaging." },
-      { "id": "r2", "author": "Claire B.", "rating": 4, "date": "2025-08-22", "content": "Solid product for GHRH research. Would order again." }
+      {
+        "id": "r1",
+        "author": "Mark A.",
+        "rating": 5,
+        "date": "2025-10-05",
+        "content": "Excellent purity, clean white powder. Fast shipping and secure packaging."
+      },
+      {
+        "id": "r2",
+        "author": "Claire B.",
+        "rating": 4,
+        "date": "2025-08-22",
+        "content": "Solid product for GHRH research. Would order again."
+      }
     ]
   },
   {
@@ -147,11 +323,27 @@
     "dosageInfo": "Supplied as 10mg lyophilized powder. Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "10mg", "price": 110, "sku": "FOX04-10" }
+      {
+        "label": "10mg",
+        "price": 95,
+        "sku": "FOX04-10"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Dr. L. Thompson", "rating": 5, "date": "2025-11-02", "content": "Highest purity FOX04-DRI I've sourced. Crucial compound for our aging biology lab." },
-      { "id": "r2", "author": "Stefan K.", "rating": 5, "date": "2025-09-18", "content": "Well packaged, fast delivery. This is a niche peptide and Proton stocks it reliably." }
+      {
+        "id": "r1",
+        "author": "Dr. L. Thompson",
+        "rating": 5,
+        "date": "2025-11-02",
+        "content": "Highest purity FOX04-DRI I've sourced. Crucial compound for our aging biology lab."
+      },
+      {
+        "id": "r2",
+        "author": "Stefan K.",
+        "rating": 5,
+        "date": "2025-09-18",
+        "content": "Well packaged, fast delivery. This is a niche peptide and Proton stocks it reliably."
+      }
     ]
   },
   {
@@ -165,11 +357,27 @@
     "dosageInfo": "Supplied as 2mg lyophilized powder. Highly temperature-sensitive — keep frozen until use. Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "2mg", "price": 30, "sku": "MGF-2" }
+      {
+        "label": "2mg",
+        "price": 25,
+        "sku": "MGF-2"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Paul G.", "rating": 5, "date": "2025-09-10", "content": "Good purity, arrived frozen as expected. Excellent price for MGF." },
-      { "id": "r2", "author": "Anna V.", "rating": 4, "date": "2025-07-28", "content": "Reliable source for MGF. Ships with cold packs, arrives in good condition." }
+      {
+        "id": "r1",
+        "author": "Paul G.",
+        "rating": 5,
+        "date": "2025-09-10",
+        "content": "Good purity, arrived frozen as expected. Excellent price for MGF."
+      },
+      {
+        "id": "r2",
+        "author": "Anna V.",
+        "rating": 4,
+        "date": "2025-07-28",
+        "content": "Reliable source for MGF. Ships with cold packs, arrives in good condition."
+      }
     ]
   },
   {
@@ -183,12 +391,34 @@
     "dosageInfo": "Supplied as 100mg lyophilized copper peptide powder. Store at -20°C.",
     "featured": true,
     "variants": [
-      { "label": "100mg", "price": 45, "sku": "GHKCU-100" }
+      {
+        "label": "100mg",
+        "price": 40,
+        "sku": "GHKCU-100"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Sophie M.", "rating": 5, "date": "2025-11-08", "content": "Clean blue powder, high purity. Using for collagen synthesis research. Excellent quality." },
-      { "id": "r2", "author": "Oliver T.", "rating": 5, "date": "2025-10-14", "content": "Best value GHK-Cu I've found. Ships fast, arrives with CoA. Will reorder." },
-      { "id": "r3", "author": "Fiona D.", "rating": 4, "date": "2025-09-01", "content": "Good product, consistent quality across two orders." }
+      {
+        "id": "r1",
+        "author": "Sophie M.",
+        "rating": 5,
+        "date": "2025-11-08",
+        "content": "Clean blue powder, high purity. Using for collagen synthesis research. Excellent quality."
+      },
+      {
+        "id": "r2",
+        "author": "Oliver T.",
+        "rating": 5,
+        "date": "2025-10-14",
+        "content": "Best value GHK-Cu I've found. Ships fast, arrives with CoA. Will reorder."
+      },
+      {
+        "id": "r3",
+        "author": "Fiona D.",
+        "rating": 4,
+        "date": "2025-09-01",
+        "content": "Good product, consistent quality across two orders."
+      }
     ]
   },
   {
@@ -202,11 +432,27 @@
     "dosageInfo": "Supplied as 10mg lyophilized powder. Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "10mg", "price": 40, "sku": "MT1-10" }
+      {
+        "label": "10mg",
+        "price": 35,
+        "sku": "MT1-10"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Lena B.", "rating": 5, "date": "2025-10-25", "content": "High purity MT1, arrived with third-party CoA. Fast shipping." },
-      { "id": "r2", "author": "Sam R.", "rating": 4, "date": "2025-09-12", "content": "Good quality, well-packaged. Reconstitutes cleanly." }
+      {
+        "id": "r1",
+        "author": "Lena B.",
+        "rating": 5,
+        "date": "2025-10-25",
+        "content": "High purity MT1, arrived with third-party CoA. Fast shipping."
+      },
+      {
+        "id": "r2",
+        "author": "Sam R.",
+        "rating": 4,
+        "date": "2025-09-12",
+        "content": "Good quality, well-packaged. Reconstitutes cleanly."
+      }
     ]
   },
   {
@@ -220,11 +466,27 @@
     "dosageInfo": "Supplied as 10mg lyophilized powder. Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "10mg", "price": 40, "sku": "MT2-10" }
+      {
+        "label": "10mg",
+        "price": 35,
+        "sku": "MT2-10"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Carlos A.", "rating": 5, "date": "2025-11-03", "content": "Good purity, arrived well packaged. Reliable source for MT2 research." },
-      { "id": "r2", "author": "Heidi W.", "rating": 4, "date": "2025-09-28", "content": "Solid product. Consistent quality, ships promptly." }
+      {
+        "id": "r1",
+        "author": "Carlos A.",
+        "rating": 5,
+        "date": "2025-11-03",
+        "content": "Good purity, arrived well packaged. Reliable source for MT2 research."
+      },
+      {
+        "id": "r2",
+        "author": "Heidi W.",
+        "rating": 4,
+        "date": "2025-09-28",
+        "content": "Solid product. Consistent quality, ships promptly."
+      }
     ]
   },
   {
@@ -238,11 +500,27 @@
     "dosageInfo": "Supplied as 10mg lyophilized powder. Store at -20°C.",
     "featured": false,
     "variants": [
-      { "label": "10mg", "price": 35, "sku": "SEMAX-10" }
+      {
+        "label": "10mg",
+        "price": 30,
+        "sku": "SEMAX-10"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Ivan P.", "rating": 5, "date": "2025-10-20", "content": "Excellent purity, fast shipping. Using for BDNF expression research." },
-      { "id": "r2", "author": "Nina K.", "rating": 4, "date": "2025-08-15", "content": "Good product, arrives well-packaged. Will reorder for our next study." }
+      {
+        "id": "r1",
+        "author": "Ivan P.",
+        "rating": 5,
+        "date": "2025-10-20",
+        "content": "Excellent purity, fast shipping. Using for BDNF expression research."
+      },
+      {
+        "id": "r2",
+        "author": "Nina K.",
+        "rating": 4,
+        "date": "2025-08-15",
+        "content": "Good product, arrives well-packaged. Will reorder for our next study."
+      }
     ]
   },
   {
@@ -256,12 +534,34 @@
     "dosageInfo": "Supplied as 70mg total lyophilized blend. Store at -20°C.",
     "featured": true,
     "variants": [
-      { "label": "70mg", "price": 130, "sku": "GLOW-70" }
+      {
+        "label": "70mg",
+        "price": 110,
+        "sku": "GLOW-70"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Isabelle F.", "rating": 5, "date": "2025-11-12", "content": "Amazing blend for skin research. Great value compared to buying components separately." },
-      { "id": "r2", "author": "Tom R.", "rating": 5, "date": "2025-10-05", "content": "Top-notch purity, ships with individual CoAs for each component. Very impressed." },
-      { "id": "r3", "author": "Yuki T.", "rating": 4, "date": "2025-09-18", "content": "Good blend, ships fast. Second order for our skin biology lab." }
+      {
+        "id": "r1",
+        "author": "Isabelle F.",
+        "rating": 5,
+        "date": "2025-11-12",
+        "content": "Amazing blend for skin research. Great value compared to buying components separately."
+      },
+      {
+        "id": "r2",
+        "author": "Tom R.",
+        "rating": 5,
+        "date": "2025-10-05",
+        "content": "Top-notch purity, ships with individual CoAs for each component. Very impressed."
+      },
+      {
+        "id": "r3",
+        "author": "Yuki T.",
+        "rating": 4,
+        "date": "2025-09-18",
+        "content": "Good blend, ships fast. Second order for our skin biology lab."
+      }
     ]
   },
   {
@@ -275,13 +575,37 @@
     "dosageInfo": "Available in 600mg/mL, 2000mg/mL, and 4000mg/mL sterile solutions. Refrigerate upon receipt.",
     "featured": false,
     "variants": [
-      { "label": "600mg", "price": 25, "sku": "LCARN-600" },
-      { "label": "2000mg", "price": 75, "sku": "LCARN-2000" },
-      { "label": "4000mg", "price": 115, "sku": "LCARN-4000" }
+      {
+        "label": "600mg",
+        "price": 25,
+        "sku": "LCARN-600"
+      },
+      {
+        "label": "2000mg",
+        "price": 75,
+        "sku": "LCARN-2000"
+      },
+      {
+        "label": "4000mg",
+        "price": 115,
+        "sku": "LCARN-4000"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Derek M.", "rating": 5, "date": "2025-10-28", "content": "Good sterile solution, arrived sealed and refrigerated. Exactly as described." },
-      { "id": "r2", "author": "Tina G.", "rating": 4, "date": "2025-09-05", "content": "Good quality, the 2000mg vial is great value for extended research." }
+      {
+        "id": "r1",
+        "author": "Derek M.",
+        "rating": 5,
+        "date": "2025-10-28",
+        "content": "Good sterile solution, arrived sealed and refrigerated. Exactly as described."
+      },
+      {
+        "id": "r2",
+        "author": "Tina G.",
+        "rating": 4,
+        "date": "2025-09-05",
+        "content": "Good quality, the 2000mg vial is great value for extended research."
+      }
     ]
   },
   {
@@ -295,11 +619,27 @@
     "dosageInfo": "Supplied as 10mL sterile solution. Store at 2–8°C.",
     "featured": false,
     "variants": [
-      { "label": "10ml", "price": 60, "sku": "SHREDX-10" }
+      {
+        "label": "10ml",
+        "price": 60,
+        "sku": "SHREDX-10"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Brad L.", "rating": 5, "date": "2025-11-05", "content": "Well-formulated blend, ships cold. Using for lipid mobilization research." },
-      { "id": "r2", "author": "Cassie N.", "rating": 4, "date": "2025-09-22", "content": "Solid product. Arrived sealed with lot number. Good value." }
+      {
+        "id": "r1",
+        "author": "Brad L.",
+        "rating": 5,
+        "date": "2025-11-05",
+        "content": "Well-formulated blend, ships cold. Using for lipid mobilization research."
+      },
+      {
+        "id": "r2",
+        "author": "Cassie N.",
+        "rating": 4,
+        "date": "2025-09-22",
+        "content": "Solid product. Arrived sealed with lot number. Good value."
+      }
     ]
   },
   {
@@ -313,11 +653,27 @@
     "dosageInfo": "Supplied as combined lyophilized/solution preparation. Refrigerate upon receipt.",
     "featured": false,
     "variants": [
-      { "label": "Standard", "price": 165, "sku": "NAD5A-STD" }
+      {
+        "label": "Standard",
+        "price": 165,
+        "sku": "NAD5A-STD"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Prof. A. Chen", "rating": 5, "date": "2025-10-15", "content": "Excellent for NAD+ biology research. High purity, arrived well-packaged." },
-      { "id": "r2", "author": "Mike D.", "rating": 5, "date": "2025-09-02", "content": "Best combination product available. Fast shipping and great customer support." }
+      {
+        "id": "r1",
+        "author": "Prof. A. Chen",
+        "rating": 5,
+        "date": "2025-10-15",
+        "content": "Excellent for NAD+ biology research. High purity, arrived well-packaged."
+      },
+      {
+        "id": "r2",
+        "author": "Mike D.",
+        "rating": 5,
+        "date": "2025-09-02",
+        "content": "Best combination product available. Fast shipping and great customer support."
+      }
     ]
   },
   {
@@ -331,11 +687,27 @@
     "dosageInfo": "30mL multi-dose vial. Store at room temperature. Use within 28 days of opening.",
     "featured": false,
     "variants": [
-      { "label": "30ml", "price": 15, "sku": "BW-30" }
+      {
+        "label": "30ml",
+        "price": 15,
+        "sku": "BW-30"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Laura T.", "rating": 5, "date": "2025-10-10", "content": "Always order with my peptides. Great price, arrives sealed." },
-      { "id": "r2", "author": "Greg P.", "rating": 5, "date": "2025-08-20", "content": "Essential supply item. Ships fast, good price." }
+      {
+        "id": "r1",
+        "author": "Laura T.",
+        "rating": 5,
+        "date": "2025-10-10",
+        "content": "Always order with my peptides. Great price, arrives sealed."
+      },
+      {
+        "id": "r2",
+        "author": "Greg P.",
+        "rating": 5,
+        "date": "2025-08-20",
+        "content": "Essential supply item. Ships fast, good price."
+      }
     ]
   },
   {
@@ -349,14 +721,46 @@
     "dosageInfo": "Available in 10mg and 30mg lyophilized preparations. Store at -20°C.",
     "featured": true,
     "variants": [
-      { "label": "10mg", "price": 80, "sku": "GLP1-10" },
-      { "label": "30mg", "price": 140, "sku": "GLP1-30" }
+      {
+        "label": "10mg",
+        "price": 70,
+        "sku": "GLP1-10"
+      },
+      {
+        "label": "30mg",
+        "price": 120,
+        "sku": "GLP1-30"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Jessica L.", "rating": 5, "date": "2025-11-14", "content": "Excellent purity, arrived with mass spec CoA. Fast shipping. My go-to source." },
-      { "id": "r2", "author": "Robert M.", "rating": 5, "date": "2025-10-30", "content": "Third order of GLP1. Consistent quality every time. Proton is reliable." },
-      { "id": "r3", "author": "Amy C.", "rating": 5, "date": "2025-10-12", "content": "Clean powder, reconstitutes well. Shipping was fast and cold-packaged." },
-      { "id": "r4", "author": "Nathan W.", "rating": 4, "date": "2025-09-25", "content": "Good quality, great price on the 30mg. Will continue ordering." }
+      {
+        "id": "r1",
+        "author": "Jessica L.",
+        "rating": 5,
+        "date": "2025-11-14",
+        "content": "Excellent purity, arrived with mass spec CoA. Fast shipping. My go-to source."
+      },
+      {
+        "id": "r2",
+        "author": "Robert M.",
+        "rating": 5,
+        "date": "2025-10-30",
+        "content": "Third order of GLP1. Consistent quality every time. Proton is reliable."
+      },
+      {
+        "id": "r3",
+        "author": "Amy C.",
+        "rating": 5,
+        "date": "2025-10-12",
+        "content": "Clean powder, reconstitutes well. Shipping was fast and cold-packaged."
+      },
+      {
+        "id": "r4",
+        "author": "Nathan W.",
+        "rating": 4,
+        "date": "2025-09-25",
+        "content": "Good quality, great price on the 30mg. Will continue ordering."
+      }
     ]
   },
   {
@@ -370,16 +774,58 @@
     "dosageInfo": "Available in 10mg, 20mg, and 40mg lyophilized preparations. Store at -20°C.",
     "featured": true,
     "variants": [
-      { "label": "10mg", "price": 85, "sku": "GLP2-10" },
-      { "label": "20mg", "price": 125, "sku": "GLP2-20" },
-      { "label": "40mg", "price": 160, "sku": "GLP2-40" }
+      {
+        "label": "10mg",
+        "price": 70,
+        "sku": "GLP2-10"
+      },
+      {
+        "label": "20mg",
+        "price": 105,
+        "sku": "GLP2-20"
+      },
+      {
+        "label": "40mg",
+        "price": 135,
+        "sku": "GLP2-40"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Patricia H.", "rating": 5, "date": "2025-11-18", "content": "Best dual agonist available at this price point. Mass spec CoA included, ships cold." },
-      { "id": "r2", "author": "Kevin J.", "rating": 5, "date": "2025-11-05", "content": "Fourth order. Proton's GLP2 is consistently pure and ships incredibly fast." },
-      { "id": "r3", "author": "Melissa T.", "rating": 5, "date": "2025-10-18", "content": "Ordered the 40mg for extended research. Excellent value at this quantity." },
-      { "id": "r4", "author": "Brian S.", "rating": 4, "date": "2025-10-01", "content": "Good product, solid purity. Minor note: ice pack had partially melted but peptide was still well-preserved." },
-      { "id": "r5", "author": "Erin W.", "rating": 5, "date": "2025-09-14", "content": "Reliable source, good pricing, fast shipping. The 20mg is perfect for my study timeline." }
+      {
+        "id": "r1",
+        "author": "Patricia H.",
+        "rating": 5,
+        "date": "2025-11-18",
+        "content": "Best dual agonist available at this price point. Mass spec CoA included, ships cold."
+      },
+      {
+        "id": "r2",
+        "author": "Kevin J.",
+        "rating": 5,
+        "date": "2025-11-05",
+        "content": "Fourth order. Proton's GLP2 is consistently pure and ships incredibly fast."
+      },
+      {
+        "id": "r3",
+        "author": "Melissa T.",
+        "rating": 5,
+        "date": "2025-10-18",
+        "content": "Ordered the 40mg for extended research. Excellent value at this quantity."
+      },
+      {
+        "id": "r4",
+        "author": "Brian S.",
+        "rating": 4,
+        "date": "2025-10-01",
+        "content": "Good product, solid purity. Minor note: ice pack had partially melted but peptide was still well-preserved."
+      },
+      {
+        "id": "r5",
+        "author": "Erin W.",
+        "rating": 5,
+        "date": "2025-09-14",
+        "content": "Reliable source, good pricing, fast shipping. The 20mg is perfect for my study timeline."
+      }
     ]
   },
   {
@@ -393,16 +839,60 @@
     "dosageInfo": "Available in 10mg and 20mg lyophilized preparations. Store at -20°C.",
     "featured": true,
     "variants": [
-      { "label": "10mg", "price": 95, "sku": "GLP3-10" },
-      { "label": "20mg", "price": 140, "sku": "GLP3-20" }
+      {
+        "label": "10mg",
+        "price": 80,
+        "sku": "GLP3-10"
+      },
+      {
+        "label": "20mg",
+        "price": 120,
+        "sku": "GLP3-20"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Dr. M. Williams", "rating": 5, "date": "2025-11-20", "content": "Exceptional purity on the GLP3. Mass spec confirms >99%. Proton is the best source I've found." },
-      { "id": "r2", "author": "Lucas F.", "rating": 5, "date": "2025-11-08", "content": "Third order of GLP3/GIP/GLUC. Consistent quality, ships with dry ice." },
-      { "id": "r3", "author": "Hannah G.", "rating": 5, "date": "2025-10-22", "content": "Best triple agonist on the market. CoA attached, fast shipping, great packaging." },
-      { "id": "r4", "author": "Omar S.", "rating": 5, "date": "2025-10-10", "content": "Using for metabolic rate research. Excellent product, will be a repeat customer." },
-      { "id": "r5", "author": "Steph K.", "rating": 4, "date": "2025-09-28", "content": "Good quality, reasonable price. CoA shows 98.4% purity which is solid." },
-      { "id": "r6", "author": "Victor P.", "rating": 5, "date": "2025-09-15", "content": "My entire lab orders from Proton now. The GLP3 in particular is hard to source this pure elsewhere." }
+      {
+        "id": "r1",
+        "author": "Dr. M. Williams",
+        "rating": 5,
+        "date": "2025-11-20",
+        "content": "Exceptional purity on the GLP3. Mass spec confirms >99%. Proton is the best source I've found."
+      },
+      {
+        "id": "r2",
+        "author": "Lucas F.",
+        "rating": 5,
+        "date": "2025-11-08",
+        "content": "Third order of GLP3/GIP/GLUC. Consistent quality, ships with dry ice."
+      },
+      {
+        "id": "r3",
+        "author": "Hannah G.",
+        "rating": 5,
+        "date": "2025-10-22",
+        "content": "Best triple agonist on the market. CoA attached, fast shipping, great packaging."
+      },
+      {
+        "id": "r4",
+        "author": "Omar S.",
+        "rating": 5,
+        "date": "2025-10-10",
+        "content": "Using for metabolic rate research. Excellent product, will be a repeat customer."
+      },
+      {
+        "id": "r5",
+        "author": "Steph K.",
+        "rating": 4,
+        "date": "2025-09-28",
+        "content": "Good quality, reasonable price. CoA shows 98.4% purity which is solid."
+      },
+      {
+        "id": "r6",
+        "author": "Victor P.",
+        "rating": 5,
+        "date": "2025-09-15",
+        "content": "My entire lab orders from Proton now. The GLP3 in particular is hard to source this pure elsewhere."
+      }
     ]
   },
   {
@@ -416,11 +906,27 @@
     "dosageInfo": "Supplied as research capsules. Store at room temperature, away from light and moisture.",
     "featured": false,
     "variants": [
-      { "label": "Capsules", "price": 125, "sku": "CGLP-CAPS" }
+      {
+        "label": "Capsules",
+        "price": 105,
+        "sku": "CGLP-CAPS"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Rachel P.", "rating": 5, "date": "2025-11-01", "content": "Novel compound, hard to source. Proton has it at a fair price with CoA." },
-      { "id": "r2", "author": "Alex D.", "rating": 4, "date": "2025-09-20", "content": "Good quality oral formulation. Packaging is professional." }
+      {
+        "id": "r1",
+        "author": "Rachel P.",
+        "rating": 5,
+        "date": "2025-11-01",
+        "content": "Novel compound, hard to source. Proton has it at a fair price with CoA."
+      },
+      {
+        "id": "r2",
+        "author": "Alex D.",
+        "rating": 4,
+        "date": "2025-09-20",
+        "content": "Good quality oral formulation. Packaging is professional."
+      }
     ]
   },
   {
@@ -434,13 +940,39 @@
     "dosageInfo": "Available in 100mg and 250mg lyophilized preparations. Store at -20°C, protect from light.",
     "featured": false,
     "variants": [
-      { "label": "100mg", "price": 45, "sku": "NAD-100" },
-      { "label": "250mg", "price": 80, "sku": "NAD-250" }
+      {
+        "label": "100mg",
+        "price": 40,
+        "sku": "NAD-100"
+      },
+      {
+        "label": "250mg",
+        "price": 70,
+        "sku": "NAD-250"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Prof. S. Lee", "rating": 5, "date": "2025-11-10", "content": "Excellent purity NAD+. Using for sirtuin activation research. Will continue ordering." },
-      { "id": "r2", "author": "Diane W.", "rating": 5, "date": "2025-10-05", "content": "Good packaging, light-protected vial, ships fast. The 250mg is great value." },
-      { "id": "r3", "author": "Tony M.", "rating": 4, "date": "2025-09-01", "content": "Solid product. Confirmed purity by HPLC. Good price for the 100mg size." }
+      {
+        "id": "r1",
+        "author": "Prof. S. Lee",
+        "rating": 5,
+        "date": "2025-11-10",
+        "content": "Excellent purity NAD+. Using for sirtuin activation research. Will continue ordering."
+      },
+      {
+        "id": "r2",
+        "author": "Diane W.",
+        "rating": 5,
+        "date": "2025-10-05",
+        "content": "Good packaging, light-protected vial, ships fast. The 250mg is great value."
+      },
+      {
+        "id": "r3",
+        "author": "Tony M.",
+        "rating": 4,
+        "date": "2025-09-01",
+        "content": "Solid product. Confirmed purity by HPLC. Good price for the 100mg size."
+      }
     ]
   },
   {
@@ -454,11 +986,27 @@
     "dosageInfo": "Bundle includes 10mg GLP2 lyophilized isolate and 10mL bacteriostatic water. Store per individual component instructions.",
     "featured": false,
     "variants": [
-      { "label": "Bundle", "price": 100, "sku": "GLP2-BUNDLE" }
+      {
+        "label": "Bundle",
+        "price": 85,
+        "sku": "GLP2-BUNDLE"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "Chris V.", "rating": 5, "date": "2025-10-28", "content": "Perfect starter bundle. Everything needed in one order, great price." },
-      { "id": "r2", "author": "Sara N.", "rating": 4, "date": "2025-09-15", "content": "Convenient bundle, shipped together properly cold-packed. Solid value." }
+      {
+        "id": "r1",
+        "author": "Chris V.",
+        "rating": 5,
+        "date": "2025-10-28",
+        "content": "Perfect starter bundle. Everything needed in one order, great price."
+      },
+      {
+        "id": "r2",
+        "author": "Sara N.",
+        "rating": 4,
+        "date": "2025-09-15",
+        "content": "Convenient bundle, shipped together properly cold-packed. Solid value."
+      }
     ]
   },
   {
@@ -472,11 +1020,27 @@
     "dosageInfo": "Bundle includes 10mg GLP3 lyophilized isolate and 10mL bacteriostatic water. Store per individual component instructions.",
     "featured": false,
     "variants": [
-      { "label": "Bundle", "price": 120, "sku": "GLP3-BUNDLE" }
+      {
+        "label": "Bundle",
+        "price": 100,
+        "sku": "GLP3-BUNDLE"
+      }
     ],
     "reviews": [
-      { "id": "r1", "author": "James K.", "rating": 5, "date": "2025-11-05", "content": "Great bundle for starting triple agonist research. Good price, ships fast." },
-      { "id": "r2", "author": "Monica R.", "rating": 5, "date": "2025-10-12", "content": "Excellent value. Having bacteriostatic water included is very convenient." }
+      {
+        "id": "r1",
+        "author": "James K.",
+        "rating": 5,
+        "date": "2025-11-05",
+        "content": "Great bundle for starting triple agonist research. Good price, ships fast."
+      },
+      {
+        "id": "r2",
+        "author": "Monica R.",
+        "rating": 5,
+        "date": "2025-10-12",
+        "content": "Excellent value. Having bacteriostatic water included is very convenient."
+      }
     ]
   }
 ]
