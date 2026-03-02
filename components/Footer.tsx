@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-dark text-white mt-auto">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="text-xl font-bold mb-3">
               Proton<span className="text-brand-blue">Peptides</span>
@@ -31,6 +31,18 @@ export default function Footer() {
               <li>Crypto Payments Only</li>
               <li>Fast US Shipping</li>
               <li>Research Use Only</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-3 text-sm uppercase tracking-wider text-gray-300">Support</h3>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+              <li>
+                <a href="mailto:protonpeptide@gmail.com" className="hover:text-white transition-colors break-all">
+                  protonpeptide@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>
