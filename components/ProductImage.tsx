@@ -1,15 +1,24 @@
+'use client'
+import { useState } from 'react'
+import Image from 'next/image'
 import { Product } from '@/types'
 import { Activity, Sparkles, FlaskConical, Atom } from 'lucide-react'
 
+// ─── Photo detection ─────────────────────────────────────────────────────────
+// Drop a photo named [slug].jpg (or .jpeg / .png / .webp) into /public/products/
+// and it will automatically become the main product image.
+const EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp']
+
+// ─── SVG fallback config ──────────────────────────────────────────────────────
 const CATEGORY_CONFIG: Record<string, {
   Icon: React.ElementType
   tagline: string
   glow: string
 }> = {
-  performance: { Icon: Activity,     tagline: 'PERFORMANCE',   glow: '#0057FF' },
-  skin:         { Icon: Sparkles,    tagline: 'SKIN RESEARCH', glow: '#818cf8' },
-  solutions:    { Icon: FlaskConical,tagline: 'SOLUTION',      glow: '#22d3ee' },
-  isolates:     { Icon: Atom,        tagline: 'ISOLATE',       glow: '#0057FF' },
+  performance: { Icon: Activity,      tagline: 'PERFORMANCE',   glow: '#0057FF' },
+  skin:         { Icon: Sparkles,     tagline: 'SKIN RESEARCH', glow: '#818cf8' },
+  solutions:    { Icon: FlaskConical, tagline: 'SOLUTION',      glow: '#22d3ee' },
+  isolates:     { Icon: Atom,         tagline: 'ISOLATE',       glow: '#0057FF' },
 }
 
 const ABBREV: Record<string, string> = {
@@ -33,7 +42,7 @@ const ABBREV: Record<string, string> = {
   'bacteriostatic-water':       'B.WATER',
   'glp1':                       'GLP-1',
   'glp2-glp-gip':               'GLP-2',
-  'glp3-glp-gip-gluc':          'GLP-3',
+  'glp3-glp-gip-gluc':          'GLP-3 RT',
   'capsulated-glp-orforglipron':'ORFG',
   'nad-plus':                   'NAD+',
   'glp2-starter-bundle':        'BUNDLE',
@@ -46,6 +55,26 @@ interface Props {
 }
 
 export default function ProductImage({ product, className = '' }: Props) {
+  // Try each extension in order; fall back to SVG when all fail
+  const [extIndex, setExtIndex] = useState(0)
+
+  if (extIndex < EXTENSIONS.length) {
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <Image
+          src={`/products/${product.slug}.${EXTENSIONS[extIndex]}`}
+          alt={product.name}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
+          onError={() => setExtIndex(i => i + 1)}
+          unoptimized
+        />
+      </div>
+    )
+  }
+
+  // ─── SVG branded fallback ──────────────────────────────────────────────────
   const cfg = CATEGORY_CONFIG[product.category] ?? CATEGORY_CONFIG.performance
   const abbrev = ABBREV[product.slug] ?? product.name.split(' ')[0].toUpperCase().slice(0, 7)
   const Icon = cfg.Icon
@@ -70,12 +99,9 @@ export default function ProductImage({ product, className = '' }: Props) {
       <div
         className="absolute rounded-full blur-3xl pointer-events-none"
         style={{
-          width: '65%',
-          height: '65%',
-          top: '-25%',
-          right: '-20%',
-          background: cfg.glow,
-          opacity: 0.18,
+          width: '65%', height: '65%',
+          top: '-25%', right: '-20%',
+          background: cfg.glow, opacity: 0.18,
         }}
       />
 
@@ -83,12 +109,9 @@ export default function ProductImage({ product, className = '' }: Props) {
       <div
         className="absolute rounded-full blur-2xl pointer-events-none"
         style={{
-          width: '40%',
-          height: '40%',
-          bottom: '-15%',
-          left: '-10%',
-          background: cfg.glow,
-          opacity: 0.08,
+          width: '40%', height: '40%',
+          bottom: '-15%', left: '-10%',
+          background: cfg.glow, opacity: 0.08,
         }}
       />
 
@@ -104,7 +127,6 @@ export default function ProductImage({ product, className = '' }: Props) {
           {abbrev}
         </span>
 
-        {/* Divider */}
         <div
           className="mt-2.5 mb-2"
           style={{ width: 32, height: 1.5, background: cfg.glow, opacity: 0.8, borderRadius: 99 }}
