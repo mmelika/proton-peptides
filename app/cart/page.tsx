@@ -28,12 +28,12 @@ export default function CartPage() {
         <div className="md:col-span-2 space-y-4">
           {items.map(item => (
             <div key={item.variantSku} className="bg-white border border-brand-border rounded-xl p-4 flex gap-4">
-              {/* Image placeholder */}
-              <div className="w-16 h-16 bg-brand-gray rounded-lg shrink-0 flex items-center justify-center">
-                <span className="text-xs font-bold text-brand-blue/40 text-center leading-tight px-1">
-                  {item.productName.slice(0, 6)}
-                </span>
-              </div>
+              <img
+                src={`/products/${item.productSlug}.png`}
+                alt={item.productName}
+                className="w-16 h-16 object-cover rounded-lg shrink-0 border border-brand-border"
+                onError={e => { e.currentTarget.src = ''; e.currentTarget.style.display = 'none' }}
+              />
 
               <div className="flex-1 min-w-0">
                 <p className="font-semibold text-brand-dark text-sm truncate">{item.productName}</p>

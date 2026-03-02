@@ -127,10 +127,16 @@ export default function CheckoutPage() {
         <div className="md:col-span-1">
           <div className="bg-brand-gray rounded-xl p-5 sticky top-24">
             <h2 className="font-bold text-brand-dark mb-4">Order Summary</h2>
-            <div className="space-y-2 mb-4 text-sm">
+            <div className="space-y-3 mb-4 text-sm">
               {items.map(item => (
-                <div key={item.variantSku} className="flex justify-between text-gray-600">
-                  <span className="truncate mr-2">{item.productName} × {item.quantity}</span>
+                <div key={item.variantSku} className="flex items-center gap-3 text-gray-600">
+                  <img
+                    src={`/products/${item.productSlug}.png`}
+                    alt={item.productName}
+                    className="w-10 h-10 object-cover rounded-lg shrink-0 border border-brand-border"
+                    onError={e => { e.currentTarget.style.display = 'none' }}
+                  />
+                  <span className="truncate flex-1">{item.productName} × {item.quantity}</span>
                   <span className="shrink-0">${(item.price * item.quantity).toFixed(2)}</span>
                 </div>
               ))}
