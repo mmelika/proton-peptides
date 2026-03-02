@@ -1,78 +1,82 @@
+/**
+ * Generate a pill bottle product image for Orforglipron by using
+ * an existing vial image as a style reference and asking Gemini
+ * to replace the vial with a pill bottle/capsule container.
+ *
+ * Usage:
+ *   GEMINI_API_KEY=... node scripts/generate-pill-bottle.mjs
+ */
+import { readFile, writeFile } from 'fs/promises'
+import { join } from 'path'
 import https from 'https'
-import fs from 'fs'
-import path from 'path'
 
 const API_KEY = process.env.GEMINI_API_KEY
-const MODEL = 'gemini-3.1-flash-image-preview'
+if (!API_KEY) { console.error('GEMINI_API_KEY not set'); process.exit(1) }
 
-// Products to generate pill bottle images for
-const PRODUCTS = [
-  {
-    slug: 'capsulated-glp-orforglipron',
-    label: 'Orforglipron\n30 Capsules',
-    prompt: `Professional product photo of a single sleek supplement pill bottle with a white screw cap, on a clean dark navy (#1A1A2E) background.
-The bottle is amber/translucent with visible orange capsules inside.
-The label is clean and modern with a dark navy background and blue (#0057FF) accent elements. The label reads:
-- "PROTON PEPTIDES" in small caps at the top
-- "Orforglipron" in large bold white text in the center
-- "30 Capsules" in smaller text below
-No prescription text, no dosage instructions, no Rx markings, no pharmacy info. Clean supplement brand label only.
-Dramatic studio lighting with a subtle blue-tinted rim light from the right. Soft shadow beneath the bottle.
-Product photography, high detail, 4K, centered composition.
-NO vials, NO syringes, NO needles. Pill bottle only.`,
-  },
-]
+const MODEL   = 'gemini-3.1-flash-image-preview'
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`
+const DIR     = new URL('../public/products', import.meta.url).pathname
 
-async function generateImage(product) {
-  const body = JSON.stringify({
-    contents: [{ parts: [{ text: product.prompt }] }],
-    generationConfig: { responseModalities: ['TEXT', 'IMAGE'] },
-  })
-
+function httpsPost(url, body) {
   return new Promise((resolve, reject) => {
+    const u = new URL(url)
+    const bodyBuf = Buffer.from(body)
     const req = https.request({
-      hostname: 'generativelanguage.googleapis.com',
-      path: `/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`,
+      hostname: u.hostname, path: u.pathname + u.search,
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(body),
-      },
-      timeout: 300000,
-    }, res => {
-      let data = ''
-      res.on('data', d => data += d)
+      headers: { 'Content-Type': 'application/json', 'Content-Length': bodyBuf.length },
+      timeout: 300_000,
+    }, (res) => {
+      const chunks = []
+      res.on('data', c => chunks.push(c))
       res.on('end', () => {
-        const json = JSON.parse(data)
-        const imagePart = json.candidates?.[0]?.content?.parts?.find(p => p.inlineData)
-        if (!imagePart) {
-          console.error(`No image for ${product.slug}:`, data.slice(0, 500))
-          reject(new Error('No image returned'))
-          return
-        }
-        const buf = Buffer.from(imagePart.inlineData.data, 'base64')
-        const outPath = path.join(process.cwd(), 'public', 'products', `${product.slug}.png`)
-        fs.writeFileSync(outPath, buf)
-        console.log(`✓ Saved ${product.slug}.png`)
-        resolve()
+        const text = Buffer.concat(chunks).toString()
+        resolve({ ok: res.statusCode < 400, status: res.statusCode,
+                  json: () => JSON.parse(text), text: () => text })
       })
     })
     req.on('error', reject)
-    req.on('timeout', () => { req.destroy(); reject(new Error('Request timed out')) })
-    req.write(body)
+    req.on('timeout', () => { req.destroy(); reject(new Error('Request timeout')) })
+    req.write(bodyBuf)
     req.end()
   })
 }
 
-async function main() {
-  for (const product of PRODUCTS) {
-    console.log(`Generating ${product.slug}...`)
-    try {
-      await generateImage(product)
-    } catch (err) {
-      console.error(`Failed ${product.slug}:`, err.message)
-    }
-  }
+// Use bpc-157 as the style reference (clear vial, good lighting)
+const referenceSlug = 'bpc-157'
+const outputSlug    = 'capsulated-glp-orforglipron'
+
+const referenceImage = (await readFile(join(DIR, `${referenceSlug}.png`))).toString('base64')
+
+const prompt =
+  `Keep the exact same background, studio lighting, shadow, and overall product photography style as this image. ` +
+  `Instead of a glass vial, replace it with a supplement pill bottle (amber/brown translucent plastic, white screw cap) ` +
+  `filled with orange capsules visible inside. ` +
+  `The label on the bottle should read "PROTON PEPTIDES" in small text at the top and "Orforglipron" in large bold text below it, with "30 Capsules" smaller underneath. ` +
+  `The label style should match the brand look of the original — dark navy label with blue accent. ` +
+  `No prescription text, no dosage instructions, no Rx markings.`
+
+console.log(`→ Generating ${outputSlug} using ${referenceSlug} as style reference...`)
+
+const res = await httpsPost(API_URL, JSON.stringify({
+  contents: [{ parts: [
+    { text: prompt },
+    { inlineData: { mimeType: 'image/png', data: referenceImage } },
+  ]}],
+  generationConfig: { responseModalities: ['IMAGE', 'TEXT'] },
+}))
+
+if (!res.ok) {
+  console.error(`HTTP ${res.status}:`, (await res.text()).slice(0, 300))
+  process.exit(1)
 }
 
-main()
+const json = res.json()
+const part = json?.candidates?.[0]?.content?.parts?.find(p => p.inlineData)
+if (!part) {
+  console.error('No image in response:', JSON.stringify(json).slice(0, 300))
+  process.exit(1)
+}
+
+await writeFile(join(DIR, `${outputSlug}.png`), Buffer.from(part.inlineData.data, 'base64'))
+console.log(`✓ Saved ${outputSlug}.png`)
