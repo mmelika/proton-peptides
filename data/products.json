@@ -896,40 +896,6 @@
     ]
   },
   {
-    "id": "capsulated-glp",
-    "slug": "capsulated-glp-orforglipron",
-    "name": "Capsulated GLP Orforglipron",
-    "category": "isolates",
-    "categoryLabel": "Freeze Dried Isolates",
-    "shortDescription": "Oral non-peptidic GLP-1 receptor agonist for bioavailability and receptor research.",
-    "description": "Orforglipron is an oral, non-peptidic, small-molecule GLP-1 receptor agonist designed for oral bioavailability. Research applications include comparing oral vs injectable GLP-1 pharmacodynamics and studying non-peptide approaches to incretin receptor agonism.",
-    "dosageInfo": "Supplied as research capsules. Store at room temperature, away from light and moisture.",
-    "featured": false,
-    "variants": [
-      {
-        "label": "Capsules",
-        "price": 105,
-        "sku": "CGLP-CAPS"
-      }
-    ],
-    "reviews": [
-      {
-        "id": "r1",
-        "author": "Rachel P.",
-        "rating": 5,
-        "date": "2025-12-22",
-        "content": "Novel compound, hard to source. Proton has it at a fair price with fast delivery."
-      },
-      {
-        "id": "r2",
-        "author": "Alex D.",
-        "rating": 4,
-        "date": "2025-12-18",
-        "content": "Good quality oral formulation. Packaging is professional."
-      }
-    ]
-  },
-  {
     "id": "nad-plus",
     "slug": "nad-plus",
     "name": "NAD+",
