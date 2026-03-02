@@ -1,4 +1,10 @@
+import type { Metadata } from 'next'
 import { Mail } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Contact Support',
+  description: 'Get in touch with Proton Peptides support. We respond within 24 hours on business days.',
+}
 
 export default function ContactPage() {
   return (

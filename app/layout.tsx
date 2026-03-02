@@ -5,9 +5,27 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import DisclaimerModal from '@/components/DisclaimerModal'
 
+const BASE_URL = 'https://www.protonpeptides.shop'
+
 export const metadata: Metadata = {
-  title: 'Proton Peptides — Research Grade Peptides',
-  description: 'Premium research-grade peptides for laboratory use. Third-party tested. Crypto payments accepted.',
+  metadataBase: new URL(BASE_URL),
+  title: {
+    template: '%s | Proton Peptides',
+    default: 'Proton Peptides — Research Grade Peptides',
+  },
+  description: 'Premium research-grade peptides for laboratory use. Third-party tested. Crypto payments accepted. Buy BPC-157, GHK-Cu, Retatrutide, GLP-1, and more.',
+  openGraph: {
+    siteName: 'Proton Peptides',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  icons: {
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

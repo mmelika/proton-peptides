@@ -1,9 +1,18 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, FlaskConical } from 'lucide-react'
 import products from '@/data/products.json'
 import { Product } from '@/types'
 import ProductCard from '@/components/ProductCard'
 import TrustBadges from '@/components/TrustBadges'
+
+export const metadata: Metadata = {
+  title: 'Research Grade Peptides',
+  description: 'Buy research-grade peptides online — BPC-157, GHK-Cu, Retatrutide, GLP-1, CJC-1295, and more. Third-party tested. Crypto payments. Fast US shipping.',
+  openGraph: {
+    images: ['/products/bpc-157.png'],
+  },
+}
 
 const allProducts = products as Product[]
 const FEATURED_ORDER = [
