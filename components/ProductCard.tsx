@@ -29,7 +29,7 @@ export default function ProductCard({ product }: Props) {
       href={`/products/${product.slug}`}
       className="group block bg-white rounded-xl border border-brand-border shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
     >
-      <ProductImage product={product} className="h-44 rounded-t-xl" />
+      <ProductImage product={product} className="h-64 rounded-t-xl" />
 
       <div className="p-4">
         {/* Category badge */}

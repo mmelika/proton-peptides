@@ -66,7 +66,7 @@ export default function ProductImage({ product, className = '' }: Props) {
           alt={product.name}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-contain"
+          className="object-cover"
           onError={() => setExtIndex(i => i + 1)}
           unoptimized
         />
