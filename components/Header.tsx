@@ -18,6 +18,7 @@ export default function Header() {
           <Link href="/products?category=performance" className="hover:text-brand-blue transition-colors">Performance</Link>
           <Link href="/products?category=isolates" className="hover:text-brand-blue transition-colors">GLP Peptides</Link>
           <Link href="/products?category=skin" className="hover:text-brand-blue transition-colors">Skin</Link>
+          <Link href="/contact" className="hover:text-brand-blue transition-colors">Contact Us</Link>
         </nav>
 
         <Link href="/cart" className="relative p-2 hover:text-brand-blue transition-colors">
