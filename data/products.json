@@ -841,12 +841,12 @@
     "variants": [
       {
         "label": "10mg",
-        "price": 80,
+        "price": 65,
         "sku": "GLP3-10"
       },
       {
         "label": "20mg",
-        "price": 120,
+        "price": 100,
         "sku": "GLP3-20"
       }
     ],
