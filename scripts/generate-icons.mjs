@@ -5,11 +5,14 @@ import path from 'path'
 const API_KEY = process.env.GEMINI_API_KEY
 const MODEL = 'gemini-3.1-flash-image-preview'
 
-const PROMPT = `Create a clean, professional square icon for a brand called "Proton Peptides".
-The icon should be a stylized capital letter "P" with atom orbital rings around it,
-rendered in bright blue (#0057FF) on a very dark navy background (#1A1A2E).
-Minimal, modern, suitable as a browser favicon or app icon. Square format, no padding, no border.
-No text other than the letter "P".`
+const PROMPT = `Design a favicon/browser icon for a brand called "Proton Peptides".
+The icon is a perfect square, 512x512 pixels.
+Design: a bold, glowing letter "P" in bright electric blue (#0057FF) centered on a deep navy/black background (#0d1117).
+The "P" should have a clean sans-serif geometric style — thick strokes, modern, like a high-end tech or pharma brand.
+Add a subtle atom ring orbiting around the "P" — a single elliptical arc in a lighter blue (#4d8bff), thin line, at about 45 degrees.
+No gradients on the background — flat very dark navy. The "P" itself can have a very subtle inner glow in blue.
+No text, no border, no rounded corners on the canvas itself — just the icon mark.
+High contrast, looks sharp at small sizes like 16x16 or 32x32.`
 
 const body = JSON.stringify({
   contents: [{ parts: [{ text: PROMPT }] }],
